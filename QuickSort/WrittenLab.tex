@@ -1,0 +1,80 @@
+% This LaTeX file contains your written lab questions.  You may answer
+% these questions just by inserting your answer into this document.
+%
+% If you're unfamiliar with LaTeX, see the document LearningLaTeX.tex
+% in this same directory.  It contains a brief explanation and a few
+% snippets of LaTeX code to get you started; in fact, it should have
+% everything you need to complete this assignment.
+
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+
+\begin{document}
+
+    \section{QuickSort}
+
+    See the source code file \texttt{quickSort.cpp} and the tests
+    given in \texttt{tests.cpp}. No written response is needed for
+    this part of the lab.
+
+    \section{Big-O Proofs}
+
+    \vspace{1.5mm}
+    \noindent {\large\textbf{Problem 1.}} Show that $8n^3+7n^2-12$ is $O(n^3)$.
+
+    \vspace{1.5mm}
+    \noindent Assume that n is an integer and n$>0$
+    \\ $8n^{3}\leqslant 8n^{3}$
+    \\ $7n^{2}\leqslant 7n^{3}$
+    \\ $-12<0$
+    \\ $8n^3+7n^2-12 \leqslant 8n^3+7n^3 = 15n^3$
+    \\ $n_{o} = 1$
+    \\ Therefore f(n) is O($n^3$) when $n_{o} = 1$ and c = 15
+    
+    % Write your proof of the above statement here.
+
+    \vspace{0.5cm}
+    \noindent {\large\textbf{Problem 2.}} Show that $6n^2-n+4$ is $O(n^2)$.
+
+    \vspace{1.5mm}
+    \noindent Assume that n is an integer and n$>0$
+    \\ $6n^{2}\leqslant 6n^{2}$
+    \\ $-n<0$
+    \\ $4\leqslant 4n^{2}$
+    \\ $6n^2-n+4 \leqslant 6n^2+4n^2 = 10n^2$
+    \\ $n_{o} = 1$
+    \\ Therefore f(n) is O($n^2$) when $n_{o} = 1$ and c = 10
+    % Write your proof of the above statement here.
+
+    \vspace{0.5cm}
+    \section{Mystery Functions}
+
+    \vspace{1.5mm}
+    \noindent fnA(n) big-O: O(n)
+    \\ $n/2 \leqslant n$
+    \vspace{1.5mm}
+    \\ fnB(n) big-O: $O(n^2)$
+    \\ $n^2 \leqslant n^2$
+    \vspace{1.5mm}
+    \\ fnC(n) big-O: $O(nlog(n))$
+    \\ $nlog(n) \leqslant nlog(n)$
+    \vspace{1.5mm}
+    \\ fnD(n) big-O: $O(n^4)$
+    \\ $n^2*n^2 \leqslant n^4$
+    \vspace{1.5mm}
+    \\ fnE(n) big-O: $O(1)$
+    \\ $4 \leqslant 4*1$, c=4
+    \vspace{1.5mm}
+    \\ fnF(n) big-O: $O(n^3)$
+    \\ $n^3 \leqslant n^3$
+    % Give your Big-O analysis of each of the mystery functions here.
+    \vspace{1.5mm}
+    \\ From fastest to slowest: E, A, C, B, F, D
+    % After your explanations, list the mystery functions A-E in sorted
+    % order from fastest to slowest.
+    
+\end{document}

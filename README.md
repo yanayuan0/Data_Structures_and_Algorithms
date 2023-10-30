@@ -10,3 +10,5 @@ Programs:
   - Maze: This program reads in a maze in text and provides the solution using depth-first search or breadth-first search.
   - Word counter: This programs counts the occurrences of each word in a text using LinkedBST.
   - Drawing on a grid: This program creates a canvas to draw different shapes on it to create an artwork. The user can draw the given shapes in shape.h and create their own artwork.
+
+Language used: C++

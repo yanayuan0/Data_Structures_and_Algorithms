@@ -1,0 +1,21 @@
+                 42
+        31               59
+    29      33       54      60
+27    30  32  38   51
+  28
+
+: After removing 31 into the tree above, the tree before rebalancing is as follows:
+
+                 42
+        30               59
+    29      33       54      60
+27        32  38   51
+  28
+
+: The re-balanced tree is as follows:
+
+                 42
+        30               59
+    28      33       54      60
+27    29  32  38   51
+

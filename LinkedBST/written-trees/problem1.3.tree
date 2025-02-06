@@ -1,0 +1,16 @@
+      7
+  4      8
+             12
+
+: After inserting 9 into the tree above, the tree before rebalancing is as follows:
+
+      7
+  4      8
+           12
+         9
+
+: The re-balanced tree is as follows, where w = 4, y = 9, and x, z = null.
+
+      8
+  7      12
+4       9    

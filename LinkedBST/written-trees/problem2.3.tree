@@ -1,0 +1,29 @@
+: The following complete binary tree represents the list {5,4,2,3,2,8,5}:
+
+      5
+  4      2
+ 3 2    8  5
+
+: The bubble-down operation as the tree is heapified is shown as follows:
+: (1) Starting with four leafs: 3, 2, 8, 5.
+
+      5
+  4      2
+ 3 2    8  5
+
+: (2) BubbleDown(2); 2 is swapped with its maximal-valued child, 8
+      5
+  4      8
+ 3 2    2  5
+
+: (3) BubbleDown(4); Since 4 is larger than both of its children, it remains in the same place.
+
+      5
+  4      8
+ 3 2    2  5
+
+: (4) BubbleDown(5); Since 5 is smaller than its child, 8, 8 is swapped with 5.
+
+      8
+  4      5
+ 3 2    2  5

@@ -1,0 +1,233 @@
+% This LaTeX file contains your written lab questions.  You may answer
+% these questions just by inserting your answer into this document.
+%
+% If you're unfamiliar with LaTeX, see the document LearningLaTeX.tex
+% in this same directory.  It contains a brief explanation and a few
+% snippets of LaTeX code to get you started; in fact, it should have
+% everything you need to complete this assignment.
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+\usepackage{alltt}
+\usepackage{enumerate}
+
+\newtheorem{claim}{Claim}
+
+\begin{document}
+    \section{Inductive Proofs}
+
+    Prove each of the following claims by induction
+
+    \begin{claim}
+      The sum of the first $n$ even numbers is $n^2 + n$.  That is, $\sum\limits_{i=1}^{n} 2i = n^2 + n$.
+    \end{claim}
+
+      %%%%%%%%%%%%%%
+      %%%% TODO %%%%
+      %%%%%%%%%%%%%%
+      % Write your proof of the above statement here.
+      
+      \vspace{1mm}
+      1. Base case: $i = 1$
+
+      LHS: $2 * (1) = 2$
+
+      RHS: $(1)^2 + 1 = 2$
+
+      Thus, LHS = RHS.
+
+      \vspace{5mm}
+      2. Inductive Hypothesis: 
+
+      Assume that $\sum\limits_{i=1}^{n} 2i = n^2 + n$ for all $1 \leqslant n \leqslant k$.
+
+      \vspace{5mm}
+      3. Inductive Step: 
+
+      \begin{math}
+        \begin{array}{r c l}
+          \textnormal{Show that } \sum\limits_{i=1}^{k+1} 2i & = & (k+1)^2+(k+1) \\
+                                                             & = & k^2+2k+1+(k+1) \\
+                                                             & = & k^2+3k+2 \\
+        \end{array}
+      \end{math}
+
+      \begin{math}
+        \begin{array}{r c l}
+          \sum\limits_{i=1}^{k+1} 2i & = & \sum\limits_{i=1}^{k} 2i + 2(k+1)\\
+                                     & = & k^2 + k + 2(k+1)\\
+                                     & = & k^2 + k + 2k + 2\\
+                                     & = & k^2 + 3k + 2\\
+        \end{array}
+      \end{math}
+
+      Thus, we have shown that $\sum\limits_{i=1}^{k+1} 2i = (k+1)^2+(k+1)$.
+      
+
+    \begin{claim}
+      $\sum\limits_{i=1}^{n} \frac{1}{2^i} = 1 - \frac{1}{2^n}$
+    \end{claim}
+
+      %%%%%%%%%%%%%%
+      %%%% TODO %%%%
+      %%%%%%%%%%%%%%
+      % Write your proof of the above statement here.
+
+      \vspace{1mm}
+      1. Base case: $i = 1$
+
+      LHS: $\frac{1}{2^(1)} = \frac{1}{2}$
+
+      RHS: $1 - \frac{1}{2^(1)} = 1 - \frac{1}{2} = \frac{1}{2}$
+
+      Thus, LHS = RHS.
+
+      \vspace{5mm}
+      2. Inductive Hypothesis: 
+
+      Assume that $\sum\limits_{i=1}^{n} \frac{1}{2^i} = 1 - \frac{1}{2^n}$ for all $1 \leqslant n \leqslant k$.
+
+      \vspace{5mm}
+      3. Inductive Step: 
+
+      \begin{math}
+        \begin{array}{r c l}
+          \textnormal{Show that } \sum\limits_{i=1}^{k+1} \frac{1}{2^i} & = & 1 - \frac{1}{2^{(k+1)}} \\
+                                                                        & = & 1 - \frac{1}{2^k} * \frac{1}{2} \\
+        \end{array}
+      \end{math}
+
+      \begin{math}
+        \begin{array}{r c l}
+          \sum\limits_{i=1}^{k+1} \frac{1}{2^i} & = & \sum\limits_{i=1}^{k} \frac{1}{2^i} + \frac{1}{2^{(k+1)}} \\
+                                                & = & 1 - \frac{1}{2^k} + \frac{1}{2^k} * \frac{1}{2} \\
+                                                & = & 1 - \frac{1}{2} * \frac{1}{2^k} \\
+                                                & = & 1 - \frac{1}{2^{(k+1)}} \\
+        \end{array}
+      \end{math}
+
+      Thus, we have shown that $\sum\limits_{i=1}^{k+1} \frac{1}{2^i} = 1 - \frac{1}{2^{(k+1)}}$.
+
+
+    \begin{claim}
+      $\sum\limits_{i=0}^{n} 2^i = 2^{n+1} - 1$
+    \end{claim}
+
+      %%%%%%%%%%%%%%
+      %%%% TODO %%%%
+      %%%%%%%%%%%%%%
+      % Write your proof of the above statement here.
+
+      \vspace{1mm}
+      1. Base case: $i = 0$
+
+      LHS: $2^0 = 1$
+
+      RHS: $2^{(0+1)} - 1 = 2 - 1 = 1$
+
+      Thus, LHS = RHS.
+
+      \vspace{5mm}
+      2. Inductive Hypothesis: 
+
+      Assume that $\sum\limits_{i=0}^{n} 2^i = 2^{n+1} - 1$ for all $0 \leqslant n \leqslant k$.
+
+      \vspace{5mm}
+      3. Inductive Step: 
+
+      \begin{math}
+        \begin{array}{r c l}
+          \textnormal{Show that } \sum\limits_{i=0}^{k+1} 2^i & = & 2^{(k+1)+1} - 1 \\
+                                                              & = & 2^{(k+2)} - 1 \\
+        \end{array}
+      \end{math}
+
+      \begin{math}
+        \begin{array}{r c l}
+          \sum\limits_{i=0}^{k+1} 2^i & = & \sum\limits_{i=0}^{k} 2^i + 2^{(k+1)}\\
+                                      & = & 2^{(k+1)} - 1 + 2^{(k+1)}\\
+                                      & = & 2^k * (2+2) - 1\\
+                                      & = & 2^k * 4 - 1\\
+                                      & = & 2^k * 2^2 - 1\\
+                                      & = & 2^{(k+2)} - 1\\
+        \end{array}
+      \end{math}
+
+      Thus, we have shown that $\sum\limits_{i=0}^{k+1} 2^i = 2^{(k+1)+1} - 1$.
+
+
+    \vspace{1cm}
+    \section{Recursive Invariants}
+    
+    The function \texttt{minEven}, given below in pseudocode, takes as
+    input an array $A$ of size $n$ of numbers.  It returns the
+    smallestest \emph{even} number in the array.  If no even numbers
+    appear in the array, it returns positive infinity ($+\infty$).
+    Using induction, prove that the \texttt{minEven} function works
+    correctly.  Clearly state your recursive invariant at the
+    beginning of your proof.
+
+    \begin{alltt}
+Function minEven(A,n)
+  If n is 0 Then
+    Return +infinity
+  Else
+    Set best To minEven(A,n-1)
+    If A[n-1] < best And A[n-1] is even Then
+      Set best To A[n-1]
+    EndIf
+    Return best
+  EndIf
+EndFunction
+    \end{alltt}
+
+    %%%%%%%%%%%%%%
+    %%%% TODO %%%%
+    %%%%%%%%%%%%%%
+    % Give your recursive invariant and your proof here.
+      Recursive invariant:
+
+      \vspace{1.5mm}
+      $P(n) =$ if there is even number in the array A, minEven() will return the smallest 
+      even number in the array. Otherwise (if there is no even number in the array A), minEven() 
+      will return positive infinity ($+\infty$). 
+
+      \vspace{5mm}
+      1. Base case: $n = 0$
+
+      \vspace{1.5mm}
+      If $n = 0$, it means the array A is empty, suggesting that there is no even number in the
+      array A, and the algorithm will return $+\infty$. 
+
+      \vspace{5mm}
+      2. Inductive Hypothesis: 
+
+      \vspace{1.5mm}
+      Assume that the algorithm minEven() works correctly for all arrays
+      of size n where $0 \leqslant n \leqslant k$.
+
+      \vspace{5mm}
+      3. Inductive Step: 
+
+      Show that the algorithm minEven() works correctly for arrays with $k+1$ elements. 
+
+      \vspace{3mm}
+      minEven($A, k+1$):
+
+      \vspace{1.5mm}
+      If $k+1 > 0$, minEven($A, k+1$) will call minEven($A, k$), which by our Inductive Hypothesis
+      works correctly. Thus, minEven($A, k+1$) will return the current smallest even number 
+      in the array A. 
+
+      \vspace{3mm}
+      If the number at index $k$ is smaller than the current smallest even number returned by minEven($A, k$),
+      which means the value at index $k$ is now the smallest even number in the array, the current smallest
+      even number (stored in the variable\textit{ best }) will be updated to the value at index k.
+
+      \vspace{1.5mm}
+      Otherwise, the current smallest even value in the array A will be returned. 
+\end{document}
